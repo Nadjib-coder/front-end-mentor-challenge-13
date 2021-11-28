@@ -192,12 +192,30 @@ article.a1 {
     margin: 130px 0 0 0;
     background-color:#F8F8FE;
     padding: 40px 0  80px;
+    position: relative;
 }
 @media (max-width:767px) {
     article.a1 {
         padding: 40px 20px;
     }
- }
+}
+article.a1::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-image: url(../images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    top: -100px;
+}
+@media (max-width:767px) {
+    article.a1::before {
+        background-image: url(../images/bg-curve-mobile.svg);
+        height: 50px;
+        top: -50px;
+    }
+}
 article.a1 .container {
     display: flex;
     justify-content: space-between;
